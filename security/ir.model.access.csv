@@ -1,3 +1,4 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
 access_dtm_odt_interna,access.dtm.odt_interna,model_dtm_odt_interna,base.group_user,1,1,1,1
+access_dtm_odt_prediseno,access.dtm.odt_prediseno,model_dtm_odt_prediseno,base.group_user,1,1,1,1
 

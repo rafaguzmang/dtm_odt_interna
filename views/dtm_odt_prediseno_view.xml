@@ -2,16 +2,15 @@
 <odoo>
     <data>
 
-        <record id="dtm_ot_interna_action" model="ir.actions.act_window">
-            <field name="name">Orden de Trabajo Interna</field>
-            <field name="res_model">dtm.odt.interna</field>
+        <record id="dtm_ot_prediseno_action" model="ir.actions.act_window">
+            <field name="name">Prediseño</field>
+            <field name="res_model">dtm.odt.prediseno</field>
             <field name="view_mode">tree,form</field>
         </record>
 
-
-        <record id="dtm_ot_interna_tree" model="ir.ui.view">
-            <field name="name">dtm.odt.interna.tree</field>
-            <field name="model">dtm.odt.interna</field>
+        <record id="dtm_ot_prediseno_tree" model="ir.ui.view">
+            <field name="name">dtm.odt.prediseno.tree</field>
+            <field name="model">dtm.odt.prediseno</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="ot_number"/>
@@ -26,9 +25,9 @@
             </field>
         </record>
 
-        <record id="dtm_ot_interna_form" model="ir.ui.view">
-            <field name="name">dtm.odt.interna.form</field>
-            <field name="model">dtm.odt.interna</field>
+        <record id="dtm_ot_prediseno_form" model="ir.ui.view">
+            <field name="name">dtm.odt.prediseno.form</field>
+            <field name="model">dtm.odt.prediseno</field>
             <field name="arch" type="xml">
                 <form>
                     <header>
@@ -38,9 +37,6 @@
                         <div class="oe_button_box" name="button_box">
                             <button name="action_pasive" type="object" string="Anexos" class="oe_stat_button" icon="fa-calendar">
                                 <field name="date_in"  string="" widget="statinfo"/>
-                            </button>
-                            <button name="action_pasive" type="object" string="Cliente" class="oe_stat_button" icon="fa-user">
-                                <field name="name_client"  string="" widget="statinfo"/>
                             </button>
                             <button name="action_pasive" type="object" string="tipo" class="oe_stat_button" icon="fa-clipboard">
                                 <field name="tipe_order"  string="" widget="statinfo"/>
@@ -89,6 +85,6 @@
             </field>
         </record>
 
-<!--        <menuitem id="dtm_ot_interna_action_menu" action="dtm_ot_interna_action"/>-->
+<!--        <menuitem id="dtm_ot_prediseno_action_menu" action="dtm_ot_prediseno_action"/>-->
     </data>
 </odoo>

@@ -7,9 +7,9 @@
         'security/ir.model.access.csv',
         #Views
         'views/dtm_odt_interna_view.xml',
-        # 'views/dtm_npi_view.xml',
+        'views/dtm_odt_prediseno_view.xml',
         #Menú
-        # 'views/dtm_menu.xml',
+        'views/menu_item.xml',
 
         ],
     'license': 'LGPL-3',
