@@ -24,6 +24,7 @@ class OrdenInterna(models.Model):
     cuantity = fields.Integer(string="CANTIDAD")
     disenador = fields.Selection(string="DISEÑADOR", selection=[("andres","Andrés Orozco"),("luis","Luís García")])
     anexos_id = fields.Many2many("ir.attachment",string="Archivos")
+    solicitante = fields.Char(string="Solicitante")
 
     #---------------------Resumen de descripción------------
     descripcion = fields.Text(string="DESCRIPCIÓN")
