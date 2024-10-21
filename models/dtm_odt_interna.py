@@ -11,8 +11,8 @@ class OrdenInterna(models.Model):
     def action_autoNum(self): # Genera número consecutivo de NPI
         # get_terminado = self.env['dtm.facturado.npi'].search([],order='ot_number desc',limit=1)
         get_npi = self.env['dtm.odt'].search([("tipe_order","=","ODT-I")],order='ot_number desc', limit=1)
-        # return get_npi.ot_number + 1 if get_npi.ot_number > get_terminado.ot_number else get_terminado.ot_number + 1
-        return get_npi + 1 if get_npi else 1
+        get_self = self.env['dtm.odt.interna'].search([],order='ot_number desc', limit=1)
+        return get_npi.ot_number + 1 if get_npi.ot_number > get_self.id else get_self.id + 1
 
     ot_number = fields.Integer(string="NO.",default=action_autoNum,readonly=True)
     tipe_order = fields.Char(string="TIPO",readonly=True, default='ODT-I')

@@ -10,8 +10,8 @@ class Prediseno(models.Model):
     def action_autoNum(self): # Genera número consecutivo de NPI
         # get_terminado = self.env['dtm.facturado.npi'].search([],order='ot_number desc',limit=1)
         get_pd = self.env['dtm.odt'].search([("tipe_order","=","PD")],order='ot_number desc', limit=1)
-        # return get_npi.ot_number + 1 if get_npi.ot_number > get_terminado.ot_number else get_terminado.ot_number + 1
-        return get_pd + 1 if get_pd else 1
+        get_self = self.env['dtm.odt.prediseno'].search([],order='ot_number desc', limit=1)
+        return get_pd.ot_number + 1 if get_pd.ot_number > get_self.id else get_self.id + 1
 
     ot_number = fields.Integer(string="NO.",default=action_autoNum,readonly=True)
     tipe_order = fields.Char(string="TIPO",readonly=True, default='PD')
