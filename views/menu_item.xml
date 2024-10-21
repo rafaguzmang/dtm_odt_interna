@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
      <menuitem name="Ordenes Internas/Prediseño" id="menu_root_dtm_diseno">
-        <menuitem id="dtm_ot_interna_action_menu" action="dtm_ot_interna_action"/>
-        <menuitem id="dtm_ot_prediseno_action_menu" action="dtm_ot_prediseno_action"/>
+<!--        <menuitem id="dtm_ot_interna_action_menu" action="dtm_ot_interna_action"/>-->
+<!--        <menuitem id="dtm_ot_prediseno_action_menu" action="dtm_ot_prediseno_action"/>-->
      </menuitem>
 </odoo>
